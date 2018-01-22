@@ -1,5 +1,9 @@
 package com.company;
 
+/**
+ * @author William Delarosa
+ */
+
 public class Student extends Person implements Talkable {
     private int age;
 

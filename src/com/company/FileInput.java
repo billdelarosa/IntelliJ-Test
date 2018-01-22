@@ -6,13 +6,18 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /**
- * Created by mgreen14 on 12/27/17.
+ * @author William Delarosa
  */
 public class FileInput {
 
     private BufferedReader in = null;
     private String fileName;
 
+    /**
+     *
+     * @param fileName - paramater that holds the name of the file to be output
+     * @throws FileNotFoundException - throws if fileName entered as parameter is invalid
+     */
     public FileInput(String fileName) {
         this.fileName = fileName;
         try {
@@ -22,6 +27,10 @@ public class FileInput {
         }
     }
 
+    /**
+     * reads the fileName input and outputs line-by-line
+     * @throws Exception - if the line attempted to be read is null
+     */
     public void fileRead() {
         String line;
         try {
@@ -33,6 +42,12 @@ public class FileInput {
         }
     }
 
+    /**
+     *
+     * @return - returns a String of the line that was read to be used for output
+     * @return - returns null if there is no lines to read
+     * @throws Exception - throws exception if there are no lines to read from the file input
+     */
     public String fileReadLine() {
         try {
             String line = in.readLine();
@@ -43,6 +58,9 @@ public class FileInput {
         }
     }
 
+    /**
+     * closes the file reader / input
+     */
     public void fileClose() {
         if (in != null) {
             try {

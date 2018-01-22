@@ -1,5 +1,9 @@
 package com.company;
 
+/**
+ * @author William Delarosa
+ */
+
 public abstract class Person {
     private String name;
 

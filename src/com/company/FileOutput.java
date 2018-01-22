@@ -3,13 +3,20 @@ package com.company;
 import java.io.*;
 
 /**
- * Created by mgreen14 on 12/27/17.
+ * @author William Delarosa
  */
+
 public class FileOutput {
 
     Writer out = null;
     private String fileName;
 
+    /**
+     *
+     * @param fileName - paramater that holds the name of the file to be output
+     * @throws FileNotFoundException - if fileName parameter is invalid
+     *
+     */
     public FileOutput(String fileName) {
         this.fileName = fileName;
         try {
@@ -20,6 +27,11 @@ public class FileOutput {
         }
     }
 
+    /**
+     *
+     * @param line - holds the String output of the file that is being output
+     *
+     */
     public void fileWrite(String line) {
         try {
             out.write(line+"\n");
@@ -29,6 +41,9 @@ public class FileOutput {
         }
     }
 
+    /**
+     * closes the file output
+     */
     public void fileClose() {
         if (out != null) {
             try {
