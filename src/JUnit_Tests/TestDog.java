@@ -25,4 +25,5 @@ public class TestDog extends junit.framework.TestCase {
         testSetUp();
         assertTrue("Dog should be friendly", isFriendly);
     }
+
 }
